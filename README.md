@@ -2,7 +2,7 @@
 
 RESTFUL API for selling rockets and it's components
 
-#Endpoints
+# Endpoints
 
 | Method | Endpoint         | Description           | Data             |
 |--------|------------------|-----------------------|------------------|
