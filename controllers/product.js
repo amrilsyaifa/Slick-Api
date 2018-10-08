@@ -18,11 +18,14 @@ const product = app => {
 
         _products.push(req.body)
         res.json({"info" : "Success Created"})
-        
+
         // console.log(_products)
     })
 
     //Read
+    app.get('/api/products', (req,res) => {
+        res.json(_products)
+    })
 
     //Update
 
