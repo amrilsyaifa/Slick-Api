@@ -1,0 +1,22 @@
+{
+  "name": "slick-api",
+  "version": "1.0.0",
+  "description": "Building Slick API With Express, Nodejs and Mongodb",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrilsyaifa/Slick-Api.git"
+  },
+  "author": "amril syaifa yasin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amrilsyaifa/Slick-Api/issues"
+  },
+  "homepage": "https://github.com/amrilsyaifa/Slick-Api#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
