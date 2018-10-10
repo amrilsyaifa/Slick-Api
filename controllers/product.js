@@ -26,29 +26,22 @@ const product = app => {
 
     //Update
     app.put('/api/products/:id', (req,res) => {
-        //proses update
-        const index = _.findIndex(_products, {
-            id: parseInt(req.params.id)
+        Product.update({ _id : req.params.id}, req.body)
+        .then(() => {
+            res.json({"info" : "Success Updated"})
+        }).catch(err => {
+            console.log(err)
         })
-
-        console.log(index)
-
-        //akan merusa data data lama di timpa
-        // _products[index] = req.body
-
-        //solusi tidak merusak data dengan lodash merge
-        _.merge(_products[index], req.body)        
-
-        res.json({"info" : "Success Updated"})
     })
 
     //Delete
     app.delete('/api/products/:id', (req, res) => {
-
-        _.remove(_products, tes => {
-            return tes.id === parseInt(req.params.id)
+        Product.remove({ _id: req.params.id})
+        .then(() => {
+            res.json({"info" : "Succed Removed"})
+        }).catch(err => {
+            console.log(err)
         })
-        res.json({"info" : "Succed Removed"})
     })
 }
 

@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const mongoose = require('mongoose')
 
+mongoose.set('useFindAndModify', false);
 mongoose.connect('mongodb://localhost:27017/smart', { useNewUrlParser: true }).then(() => {
     console.log('Conected Mongodb')
 }).catch(err =>{
