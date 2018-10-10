@@ -1,14 +1,6 @@
 const _ = require('lodash')
 const Product = require('../models/product')
 
-// function product (app) {
-
-// }
-
-// module.exports = app => {
-
-// }
-
 const product = app => {
     let _products = []
 
@@ -25,7 +17,11 @@ const product = app => {
 
     //Read
     app.get('/api/products', (req,res) => { 
-        res.json(_products)
+        Product.find().then(products => {
+            res.json(products)
+        }).catch(err => {
+            console.log(err)
+        })
     })
 
     //Update
