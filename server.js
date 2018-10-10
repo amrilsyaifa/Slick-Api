@@ -1,6 +1,9 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
+const mongoose = require('mongoose')
+
+mongoose.connect('mongodb://localhost:27017/smart', { useNewUrlParser: true })
 
 app.use(bodyParser.json())
 const product = require('./controllers/product')(app)
